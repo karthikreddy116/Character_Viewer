@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/header_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:layout_marginStart="20dp"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+    <EditText
+        android:id="@+id/chatSearchInput"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="60dp"
+        android:hint="Search Characters"
+        android:imeOptions="actionSearch"
+        android:paddingStart="10dp"
+        android:singleLine="true"
+        android:textSize="15sp"
+        android:visibility="gone"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/searchChat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="10dp"
+        app:backgroundTint="#ffffff"
+        app:fabSize="mini"
+        app:srcCompat="@drawable/ic_open_search" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/searchChat">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</RelativeLayout>
